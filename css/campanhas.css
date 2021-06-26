@@ -1,0 +1,38 @@
+.campanhas {
+	background: var(--verde-claro);
+	padding-bottom: 1rem;
+	padding-top: 2.5rem;
+}
+
+.campanhas-titulo {
+	color: var(--verde-escuro);
+	font: 700 2rem var(--nunito);
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.campanhas-painel {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2.5rem;
+}
+
+.campanhas-painel-imagem {
+	box-shadow: 0 2px 10px 5px #00000020;
+	margin-bottom: 1rem;
+	max-width: 600px;
+	width: 100vw;
+}
+
+.campanhas-painel-legenda {
+	font-size: 1.2rem;
+	line-height: normal;
+}
+
+@media screen and (min-width: 768px) {
+	.campanhas-painel-legenda {
+		text-align: left;
+		width: 600px;
+	}	
+}

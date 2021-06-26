@@ -1,0 +1,45 @@
+.destaque {
+	align-items: center;
+	background-color: var(--cinza-claro);
+	color: var(--cinza-escuro);
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 2.5rem;
+	padding-top: 12.25rem;
+	text-align: center;
+}
+
+.destaque-titulo {
+	font: 700 2rem var(--nunito);
+	margin-bottom: 1rem;
+}
+
+.destaque-texto {
+	font-size: 1.2rem;
+	line-height: normal;
+	margin: 0 auto 2.5rem;
+}
+
+.destaque-botao {
+	width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+	.destaque {
+		background-image: url('../img/header-bg.jpg');
+		background-position-y: 50%;
+		background-size: cover;
+		padding-top: 7.25rem;
+	}
+
+	.destaque-titulo {
+		font-size: 3.5rem;
+	}
+
+	.destaque-texto {
+		font-size: 1.4rem;
+		width: 800px;
+	}
+}
+
+

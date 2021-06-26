@@ -1,0 +1,56 @@
+.doacoes {
+	background: var(--cinza-claro);
+	padding-bottom: 2.5rem;
+	padding-top: 2.5rem;
+}
+
+.doacoes-lista {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.doacoes-item {
+	max-width: 280px;
+	box-sizing: border-box;
+	padding: 2rem 0 2rem 5rem;
+	background-repeat: no-repeat;
+	background-position: top 1.75rem left 0.75rem;
+}
+
+.doacoes-item--alimentos {
+	background-image: url('../img/apple.svg');
+}
+
+.doacoes-item--brinquedos {
+	background-image: url('../img/toy.svg');
+}
+
+.doacoes-item--moveis {
+	background-image: url('../img/couch.svg');
+}
+
+.doacoes-item-titulo {
+	font: 700 1.2rem var(--nunito);
+	text-transform: uppercase;
+	margin-bottom: 1.5rem;
+}
+
+.doacoes-item-texto {
+	line-height: normal;
+}
+
+@media screen and (min-width: 768px) {
+	.doacoes-item {
+		max-width: 380px;
+	}
+
+	.doacoes-item-titulo {
+		font-size: 1.4 rem;
+	}
+
+	.doacoes-item-texto {
+		font-size: 1.1rem;
+	}
+}
+

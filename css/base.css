@@ -1,0 +1,42 @@
+:root {
+	--cinza-claro: #efefef;
+	--cinza-escuro: #2f2f2f;
+	--verde: #5da885;
+	--borda-card: rgba(93, 168, 133, 0.4);
+	--verde-claro: #cff0e0;
+	--verde-escuro: #3d6e57;
+	--verde-escuro-com-opacidade: rgba(93, 168, 133, 0.2);
+	--vermelho: #b72e2e;
+	--borda-mapa: rgba(40, 40, 40, 0.8);
+	--nunito: 'Nunito', sans-serif;
+	--roboto: 'Roboto', sans-serif;
+
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--roboto);
+}
+
+.container {
+	padding-left: 6%;
+	padding-right: 6%;
+}
+
+.botao {
+	text-align: center;
+	display: block;
+	width: 100%;
+	max-width: 350px;
+	box-sizing: border-box;
+	padding: 1rem 2rem;
+	border: 1px solid var(--cinza-escuro);
+	border-radius: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		padding-left: calc((100% - 960px) / 2);
+		padding-right: calc((100% - 960px) / 2);
+	}
+}

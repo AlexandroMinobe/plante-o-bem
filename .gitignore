@@ -1,0 +1,11 @@
+# Ignorar pasta e arquivos
+.vscode
+
+# Ignorar os arquivos e pastas a partir desse diretório
+tmp/**
+
+# Manter o arquivo em qualquer parte do projeto (exceção da regra
+!.gitkeep
+
+*.class
+[bB]uild/
