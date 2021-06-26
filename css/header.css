@@ -1,32 +1,126 @@
 .cabecalho {
 	align-items: center;
-	border-bottom: 1px solid var(--verde-escuro-com-opacidade);
 	box-sizing: border-box;
 	color: var(--cinza-escuro);
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: space-between;
 	padding-bottom: 0.75rem;
 	padding-top: 0.75rem;
 	position: absolute;
 	width: 100%;
 }
 
-.cabecalho-logo {
-	margin-bottom: 1rem;
+.cabecalho-navegacao {
+	position: absolute;
+	top: 5rem;
+	right: -100%;
+	height: calc(100% - 5rem);
+	width: 100%;
+	z-index: 10;
+	transition: all 0.3s ease-out;
+	display: none;
 }
 
-.cabecalho-navegacao {
-	text-align: center;
+.cabecalho-navegacao.open {
+	right: 0;
+	display: block;
 }
 
 .cabecalho-link {
-	display: inline-block;
-	font-size: 1.1rem;
-	margin-bottom: 1.25rem;
-	margin-left: 0.7rem;
-	margin-right: 0.7rem;
+	font: 700 1.5rem var(--nunito);
+	text-align: right;
+	padding: 2rem 1rem 2rem 1rem;
+	border-bottom: 1px solid var(--cinza-escuro);
+	transition: all .3s ease-out;
+	background: var(--cinza-claro);
 }
 
+.cabecalho-link:hover {
+	background: var(--cinza-escuro);
+	color: #fff
+}
+
+.cabecalho-hamnav {
+	display: flex;
+	width: 2rem;
+	height: 1.75rem;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bar-1, .bar-2, .bar-3 {
+	width: 2rem;
+	height: 0.25rem;
+	background: var(--cinza-escuro);
+	border-radius: 10px;
+	position: relative;
+	transition: all 0.3s linear;
+	transform-origin: -1px;
+}
+
+.bar-1 {
+	transform: rotate(0);
+}
+
+.bar-2 {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.bar-3 {
+	transform: rotate(0);
+}
+
+.bar-1.open {
+	transform: rotate(45deg);
+}
+
+.bar-2.open {
+	transform: translateX(20px);
+	opacity: 0;
+}
+
+.bar-3.open {
+	transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+	.cabecalho {
+		border-bottom: 1px solid var(--verde-escuro-com-opacidade);
+		flex-direction: column;
+	}
+
+	.cabecalho-logo {
+		margin-bottom: 1rem;
+	}
+
+	.cabecalho-navegacao {
+		display: block;
+		position: static;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	.cabecalho-link {
+			display: inline-block;
+			font-size: 1.1rem;
+			font-weight: 400;
+			margin: inherit 0.7rem 1.25rem;
+			padding: 0.25rem 0.5rem;
+			background: transparent;
+			border-bottom: none;
+	}
+
+	.cabecalho-link:hover {
+		border-radius: 10px;
+	}
+
+	.cabecalho-hamnav {
+		display: none;
+	}
+	
+}
 @media screen and (min-width: 1024px) {
 	.cabecalho {
 		border-bottom: none;
